@@ -31,5 +31,17 @@ public class C02_Get_Response_BilgileriAssertion {
 
             response.prettyPrint();
 
+            // 4- Expected Data ile Actual Data'nın karşılaştırılması - Assertion
+
+            response.
+                    then().
+                    assertThat().
+                    statusCode(200).
+                    contentType("application/json; charset=utf-8").
+                    header("Server","Cowboy").
+                    statusLine("HTTP/1.1 200 OK");
         }
+
+
+
 }
