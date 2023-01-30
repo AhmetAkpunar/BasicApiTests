@@ -30,22 +30,21 @@ public class C04_Put_ResponseBilgileriAssertion {
 
         // 1- Request Url ve Body hazırla
 
-        String url = "https://jsonplaceholder.typicode.com/posts/11";
+        String url = "https://jsonplaceholder.typicode.com/posts/70";
 
         /*
             {
                 "title":"Ahmet",
                 "body":"Merhaba",
                 "userId":10,
-                "id":11
+                "id":70
              }
          */
-
         JSONObject reqBody = new JSONObject();
         reqBody.put("title","Ahmet");
         reqBody.put("body","Merhaba");
         reqBody.put("userId",10);
-        reqBody.put("id",11);
+        reqBody.put("id",70);
 
         // 2- Soruda istendiyse Expected Data hazırla
 
