@@ -75,10 +75,11 @@ public class C09_Post_JsonPathIleBodyTesti {
 
         Response response = given().
                                     contentType(ContentType.JSON).
-                                    when().
+                            when().
                                     body(reqBody.toString()).
-                                    post(url);
+                            post(url);
 
+        System.out.println("=========================================================");
         // Response'u yazdırdık
         response.prettyPrint();
 
@@ -94,9 +95,6 @@ public class C09_Post_JsonPathIleBodyTesti {
                 "booking.bookingdates.checkin",equalTo("2021-06-01"),
                 "booking.bookingdates.checkout",equalTo("2021-06-10"),
                 "booking.additionalneeds",equalTo("wi-fi"));
-
-        System.out.println("=========================================================");
-        response.prettyPrint();
     }
 
 

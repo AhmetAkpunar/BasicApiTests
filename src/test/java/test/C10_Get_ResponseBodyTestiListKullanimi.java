@@ -4,6 +4,8 @@ import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import org.junit.Test;
 
+import java.sql.DriverManager;
+
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.*;
 
@@ -48,4 +50,5 @@ public class C10_Get_ResponseBodyTestiListKullanimi {
                 "data.employee_name",hasItem("Ashton Cox"),
                         "data.employee_age",hasItems(61,40,30));
     }
+
 }
