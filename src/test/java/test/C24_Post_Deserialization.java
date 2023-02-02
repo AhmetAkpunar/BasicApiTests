@@ -74,22 +74,25 @@ public class C24_Post_Deserialization extends HerokuappBaseUrl {
         response.prettyPrint();
 
         // 4- Assertion
-
         HashMap<String,Object> respMap = response.as(HashMap.class);
-        assertEquals(((Map)expData.get("booking")).get("firstname"),
-                     ((Map)respMap.get("booking")).get("firstname"));
-        assertEquals(((Map)expData.get("booking")).get("lastname"),
-                     ((Map)respMap.get("booking")).get("lastname"));
-        assertEquals(((Map)expData.get("booking")).get("totalprice"),
-                     ((Map)respMap.get("booking")).get("totalprice"));
-        assertEquals(((Map)expData.get("booking")).get("depositpaid"),
-                     ((Map)respMap.get("booking")).get("depositpaid"));
-        assertEquals(((Map)expData.get("booking")).get("additionalneeds"),
-                     ((Map)respMap.get("booking")).get("additionalneeds"));
+
+        assertEquals( ((Map)expData.get("booking")).get("firstname"),
+                     ( (Map)respMap.get("booking")).get("firstname"));
+        assertEquals( ((Map)expData.get("booking")).get("lastname"),
+                     ( (Map)respMap.get("booking")).get("lastname"));
+        assertEquals( ((Map)expData.get("booking")).get("totalprice"),
+                     ( (Map)respMap.get("booking")).get("totalprice"));
+        assertEquals( ((Map)expData.get("booking")).get("depositpaid"),
+                      ((Map)respMap.get("booking")).get("depositpaid"));
+        assertEquals( ((Map)expData.get("booking")).get("additionalneeds"),
+                      ((Map)respMap.get("booking")).get("additionalneeds"));
 
         assertEquals( ((Map)(((Map)(expData.get("booking"))).get("bookingdates"))).get("checkin")
                 ,     ((Map)(((Map)(respMap.get("booking"))).get("bookingdates"))).get("checkin"));
         assertEquals( ((Map)(((Map)(expData.get("booking"))).get("bookingdates"))).get("checkout")
                 ,     ((Map)(((Map)(respMap.get("booking"))).get("bookingdates"))).get("checkout"));
+
     }
+
+
 }
