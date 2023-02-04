@@ -46,9 +46,11 @@ public class C29_Get_Pojo extends DummyBaseUrl {
 
         Response response = given().spec(specDummy).when().get("/{pp1}/{pp2}");
 
+
         // 4- Assertion
 
         PojoDummyExpectedBody resPojo = response.as(PojoDummyExpectedBody.class);
+
 
         assertEquals(expBody.getStatus(),resPojo.getStatus());
         assertEquals(expBody.getMessage(),resPojo.getMessage());
@@ -57,6 +59,8 @@ public class C29_Get_Pojo extends DummyBaseUrl {
         assertEquals(expBody.getData().getEmployee_age(),resPojo.getData().getEmployee_age());
         assertEquals(expBody.getData().getProfile_image(),resPojo.getData().getProfile_image());
         assertEquals(expBody.getData().getId(),resPojo.getData().getId());
+
+
 
     }
 }

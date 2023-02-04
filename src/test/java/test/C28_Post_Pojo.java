@@ -64,6 +64,7 @@ public class C28_Post_Pojo extends HerokuappBaseUrl {
         PojoHerokuappBooking reqBody = new PojoHerokuappBooking("Ahmet","Bulut",500,false,"wi-fi"
                 ,bookingdates);
 
+        System.out.println("reqBody = " + reqBody);
         // 2- Expected Data hazırla
 
         PojoHerokuappExpectedBody expBody = new PojoHerokuappExpectedBody(24,reqBody);
